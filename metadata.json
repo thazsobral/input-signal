@@ -1,0 +1,10 @@
+{
+  "name": "input-signal",
+  "description": "Bancada de diagnóstico de periféricos e sinais de entrada em tempo real, 100% no navegador e com latência zero (raw input).",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

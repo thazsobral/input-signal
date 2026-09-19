@@ -1,0 +1,239 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  body {
+    overscroll-behavior-y: contain;
+    touch-action: pan-y;
+  }
+
+  /* Clean technical scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: rgba(15, 23, 42, 0.6);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(51, 65, 85, 0.8);
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(6, 182, 212, 0.7);
+  }
+
+  html.light ::-webkit-scrollbar-track {
+    background: #f1f5f9;
+  }
+  html.light ::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+  }
+  html.light ::-webkit-scrollbar-thumb:hover {
+    background: #0891b2;
+  }
+}
+
+/* =========================================================================
+   LIGHT THEME ADAPTIVE STYLES
+   Provides crisp contrast, elegant surfaces, and refined typography
+   ========================================================================= */
+
+html.light body {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+/* Background surfaces */
+html.light .bg-slate-950 {
+  background-color: #f1f5f9 !important;
+}
+
+html.light .bg-slate-950\/90,
+html.light .bg-slate-950\/80,
+html.light .bg-slate-950\/70 {
+  background-color: #ffffff !important;
+}
+
+html.light .bg-slate-900 {
+  background-color: #ffffff !important;
+}
+
+html.light .bg-slate-900\/95,
+html.light .bg-slate-900\/90,
+html.light .bg-slate-900\/80 {
+  background-color: rgba(255, 255, 255, 0.98) !important;
+}
+
+html.light .bg-slate-900\/60,
+html.light .bg-slate-900\/50 {
+  background-color: #f8fafc !important;
+}
+
+html.light .bg-slate-850 {
+  background-color: #f1f5f9 !important;
+}
+
+html.light .hover\:bg-slate-850:hover {
+  background-color: #f1f5f9 !important;
+}
+
+html.light .hover\:bg-slate-750:hover,
+html.light .hover\:bg-slate-700:hover {
+  background-color: #e2e8f0 !important;
+}
+
+html.light .bg-slate-800,
+html.light .bg-slate-800\/90,
+html.light .bg-slate-800\/80,
+html.light .bg-slate-800\/60 {
+  background-color: #f1f5f9 !important;
+}
+
+html.light .bg-slate-700 {
+  background-color: #e2e8f0 !important;
+}
+
+/* Borders */
+html.light .border-slate-800,
+html.light .border-slate-800\/90,
+html.light .border-slate-800\/80,
+html.light .border-slate-700,
+html.light .border-slate-700\/80 {
+  border-color: #e2e8f0 !important;
+}
+
+html.light .border-slate-850 {
+  border-color: #e2e8f0 !important;
+}
+
+/* Text Colors */
+html.light .text-white,
+html.light .text-slate-100 {
+  color: #0f172a !important;
+}
+
+html.light .text-slate-200,
+html.light .text-slate-300 {
+  color: #1e293b !important;
+}
+
+html.light .text-slate-400 {
+  color: #475569 !important;
+}
+
+html.light .text-slate-500 {
+  color: #64748b !important;
+}
+
+html.light .hover\:text-white:hover {
+  color: #0f172a !important;
+}
+
+/* Form selects, inputs & options */
+html.light select,
+html.light select option {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+}
+
+html.light input {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+html.light input::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Vector Mouse SVG Light Mode Enhancements */
+html.light svg path.fill-slate-900 {
+  fill: #e2e8f0;
+}
+html.light svg path.fill-slate-850 {
+  fill: #cbd5e1;
+}
+html.light svg path.fill-slate-800 {
+  fill: #cbd5e1;
+}
+html.light svg path.fill-slate-800\/80 {
+  fill: #cbd5e1;
+}
+html.light svg path.stroke-slate-700,
+html.light svg path.stroke-slate-700\/60,
+html.light svg path.stroke-slate-600 {
+  stroke: #94a3b8;
+}
+
+/* Badges and chips in light mode */
+html.light span.bg-slate-800,
+html.light div.bg-slate-800 {
+  background-color: #e2e8f0 !important;
+  color: #334155 !important;
+}
+
+/* Buttons and toggles in light mode */
+html.light button.bg-slate-800,
+html.light button.bg-slate-800\/80 {
+  background-color: #f1f5f9 !important;
+  color: #334155 !important;
+  border-color: #cbd5e1 !important;
+}
+html.light button.bg-slate-800:hover,
+html.light button.bg-slate-800\/80:hover {
+  background-color: #e2e8f0 !important;
+  color: #0f172a !important;
+}
+
+html.light button#theme-toggle-btn {
+  background-color: #f1f5f9 !important;
+  border-color: #cbd5e1 !important;
+  color: #334155 !important;
+}
+html.light button#theme-toggle-btn:hover {
+  background-color: #e2e8f0 !important;
+}
+
+html.light button#audio-alert-btn {
+  border-color: #cbd5e1 !important;
+}
+
+/* Secondary collapsible panel icons and buttons */
+html.light section div > div > button.bg-slate-800,
+html.light section div > div > div.bg-slate-800 {
+  background-color: #e2e8f0 !important;
+  color: #475569 !important;
+}
+
+/* Keyboard keys in light mode */
+html.light #keyboard-matrix-section button {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Interactive Pad surface in light mode */
+html.light #mouse-pad-surface {
+  background-color: #f8fafc !important;
+  border-color: #cbd5e1 !important;
+}
+html.light #mouse-pad-surface:hover {
+  border-color: #06b6d4 !important;
+}
+
+/* Table header in log stream */
+html.light thead.bg-slate-900\/95 {
+  background-color: #f1f5f9 !important;
+  color: #475569 !important;
+  border-color: #e2e8f0 !important;
+}
